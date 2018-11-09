@@ -32,8 +32,11 @@
 }
 
 html {
-	background-color: #27183C;
+	background-color: #1E122C;
 	color: white;
 	font-family: work-sans;
+	background-image: url("./images/bg-3.png");
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 

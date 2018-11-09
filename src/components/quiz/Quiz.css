@@ -1,0 +1,12 @@
+.quiz-container {
+	width: 500px;
+	margin: 0 auto;
+}	
+
+.quiz-container h2 {
+	font-family: Crimson Text, serif;
+}
+
+.quiz-question-container {
+	margin-top: 40px;
+}
