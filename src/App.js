@@ -8,11 +8,11 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-			<Router>
+			<Router basename={process.env.PUBLIC_URL}>
 				<div>
 					<Navbar />	
-					<Route exact path={process.env.PUBLIC_URL + "/"} component={Home} />	
-					<Route exact path={process.env.PUBLIC_URL + "/quiz"} component={Quiz} />	
+					<Route exact path={"/"} component={Home} />	
+					<Route exact path={"/quiz"} component={Quiz} />	
 				</div>
 			</Router>
     );
