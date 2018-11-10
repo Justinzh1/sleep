@@ -13,8 +13,8 @@ class Navbar extends Component {
 				</div>
 				<div className="navbar-menu">
 					<Link to="/info">info</Link>
-					<Link to="/info">compare</Link>
-					<Link to="/info">faq</Link>
+					<Link to="/quiz">compare</Link>
+					<Link to="/faq">faq</Link>
 				</div>
 			</div>
 		);

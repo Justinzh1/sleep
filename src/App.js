@@ -11,8 +11,8 @@ class App extends Component {
 			<Router>
 				<div>
 					<Navbar />	
-					<Route exact path="/" component={Home} />	
-					<Route exact path="/quiz" component={Quiz} />	
+					<Route exact path={process.env.PUBLIC_URL + "/"} component={Home} />	
+					<Route exact path={process.env.PUBLIC_URL + "/quiz"} component={Quiz} />	
 				</div>
 			</Router>
     );
