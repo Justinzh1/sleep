@@ -1,6 +1,7 @@
 .quiz-container {
 	width: 500px;
 	margin: 0 auto;
+	padding-bottom: 80px;
 }	
 
 .quiz-container h2 {
@@ -9,4 +10,33 @@
 
 .quiz-question-container {
 	margin-top: 40px;
+}
+
+table {
+	border: 1px solid white;
+	border-collapse: collapse;
+}
+
+td {
+	min-width: 50px;
+	padding: 10px;
+	text-align: center;
+}
+
+table , th, td {
+	border-bottom: 1px solid white;
+}
+
+tr:hover {
+	background-color: rgba(255,255,255,0.1);
+}
+
+.indicator {
+	position: relative;
+	top: 40px;
+	left: -30px;
+}
+
+.selected {
+	background-color: rgba(255,255,255,0.1);
 }
