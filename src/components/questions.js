@@ -142,7 +142,7 @@ export default {
 				{
 					4: "Will wake up at usual time, but will not fall back asleep",
 					3: "Will wake up at usual time and will doze thereafter",
-					2: "Will wake up at usual time, but will face asleep again",
+					2: "Will wake up at usual time, but will fall asleep again",
 					1: "Will not wake up until later than usual",
 				},
 		},
