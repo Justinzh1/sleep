@@ -40,3 +40,7 @@ tr:hover {
 .selected {
 	background-color: rgba(255,255,255,0.1);
 }
+
+.quiz-results {
+	margin-top: 60px;
+}
