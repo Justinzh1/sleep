@@ -53,7 +53,7 @@ def parse():
        	c = Counter(scores)
         st = "["
         for s,v in c.most_common():
-            st += "{{x:{}, y:{}}}, ".format(s,v)
+            st += "{{x:{}, y:{}, label:\"{} for {} people\"}}, ".format(s,v,s,v)
         st += "]"
         print(st)	
 
