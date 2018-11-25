@@ -167,6 +167,8 @@ class QuizQuestion extends Component {
 			return (
 				<div className="compare">
 					<h2> Survey Results </h2>
+					<br />
+					<p> The following results were gathered from a survey answered by 83 participants. Convenience sampling was used to gather the data in a timely manner, most of the participants are college undergraduates or new graduates.</p>
 					<VictoryPie 
 						data={this.get_data()}
 						style={{ labels: { fontSize: 16, fill: "#1E122C" }}}
