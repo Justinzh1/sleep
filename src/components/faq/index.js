@@ -60,6 +60,7 @@ class FaqCard extends Component {
 			return (
 				<p className="faq-text">
 					<i style={{"opacity": 0.7}} >{ this.props.answer }</i>
+
 				</p>
 			);
 		}
