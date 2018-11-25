@@ -23,7 +23,7 @@ class Faq extends Component {
 		return (
 			<div className="container">
 				<div className="header-container">
-						<h2> Faq </h2>
+						<h2> FAQ </h2>
 						<p> Listed below are some of the most frequently asked questions collected from our sleep survey. Feel free to click and explore more about the most common misconceptions regarding sleep. </p>
 				</div>
 				<div className="faqs-container">

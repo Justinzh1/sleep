@@ -184,11 +184,11 @@
 			"question": "Suppose you can choose your own work hours.  Assume that you work a five-hour day (including breaks), your job is interesting, and you are paid based on your performance.  At approximately what time would you choose to begin?",
 			"options":
 				{
-					"5": "5 hours starting between 4:00 – 8:00 a.m.",
-					"4": "5 hours starting between 8:00 – 9:00 a.m.",
-					"3": "5 hours starting between 9:00 a.m. – 2:00 p.m.",
-					"2": "5 hours starting between 2:00 – 5:00 p.m.",
-					"1": "5 hours starting between 5:00 p.m. – 4:00 a.m."
+					"5": "4:00 – 8:00 a.m.",
+					"4": "8:00 – 9:00 a.m.",
+					"3": "9:00 a.m. – 2:00 p.m.",
+					"2": "2:00 – 5:00 p.m.",
+					"1": "5:00 p.m. – 4:00 a.m."
 				}
 		},
 		{

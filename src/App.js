@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/index';
 import Quiz from './components/quiz/index';
 import Faq from './components/faq/index';
 import './App.css';
+import '../node_modules/react-vis/dist/style.css';
 
 class App extends Component {
   render() {
