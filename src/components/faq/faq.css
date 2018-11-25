@@ -35,6 +35,8 @@
 	top: 50%;
 	transform: translateY(-100%);
 	font-family: Roboto Slab;
+	overflow: scroll;
+	/*height: 325px;*/
 }
 
 .faqs-container {
