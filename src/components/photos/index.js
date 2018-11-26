@@ -125,7 +125,7 @@ class Photos extends Component {
 						"font-family":"crimson text",
 						"margin": "0"
 						}}>
-						Sleep is important, heres why.
+						Sleep is important, here's why.
 					</h1>
 					<p style={{
 						"margin": 0
