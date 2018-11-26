@@ -58,6 +58,22 @@ g {
 	margin-bottom: -30px;
 }
 
+.quiz-button {
+	border: 1.5px solid white;
+	margin: 0 auto;
+	width: 190px;
+	border-radius: 5px;
+	padding: 20px;
+	text-align: center;
+	transition: 500ms ease-out;
+}
+
+.quiz-button:hover {
+	background-color:white;
+	font-weight: 400 !important;
+	color: #1E122C;
+}
+
 @media only screen and (max-width: 500px) {
 	.quiz-container {
 		width: 275px;
