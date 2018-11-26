@@ -20,7 +20,8 @@ class Quiz extends Component {
 		let answered = new Set();
 		this.state = {
 			score: 0,
-			answered: answered
+			answered: answered,
+			force: false
 		};
 	}
 
@@ -40,8 +41,7 @@ class Quiz extends Component {
 	}
 
 	is_complete() {
-		console.log(this.state.answered.size === 19);
-		return this.state.answered.size === 19;
+		return this.state.answered.size === 19 || this.state.force;
 	}
 
 	get_questions() {
@@ -63,9 +63,19 @@ class Quiz extends Component {
 		});
 		return q;
 	}
+
+	force_show() {
+		this.setState({
+			force: !this.state.force
+		});
+	}
+
+	get_btn_text() {
+		return (this.state.force) ? "Hide results" : "Just show me the results";
+	}
 	
 	get_score() {
-		if (this.state.answered.size === 19) {
+		if (this.state.answered.size === 19 || this.state.force) {
 			return (
 				<div>
 					<div className="quiz-results">
@@ -105,8 +115,20 @@ class Quiz extends Component {
 			<div className="quiz-container">
 				<h2 className="quiz-question">Are you a morning person or an evening person?</h2>
 				<p>The morningness-eveningness test is a way to measure when you are the most productive. This test features a systematic way to evaluate your score. After filling out the following sections you can see the results along with how you compare with others. </p>
+
+				<br />
+
+				<div 
+					className="quiz-button"
+					onClick={() => this.force_show()}
+					>
+					{ this.get_btn_text() }
+				</div>
+
 				{this.get_score()}
+
 				{q}
+
 			</div>
 		);
 	}
