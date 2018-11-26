@@ -42,7 +42,6 @@
 
 .faqs-container {
 	display: flex;
-	width: calc(100% + 20px);
 	flex-direction: row;
 	justify-content: left;
 	flex-wrap: wrap;
@@ -56,4 +55,19 @@
 	position: absolute !important;
 	left: 30px !important;
 	bottom: 5px !important;
+}
+
+@media only screen and (max-width: 500px) {
+	.container {
+		min-width: 350px !important;
+	}
+	.header-container {
+		min-width: 300px;
+	}
+	.faq-card {
+		min-width: 300px;
+	}
+	.faqs-container {
+		min-width: 350px;
+	}
 }
