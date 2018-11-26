@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { RadialChart } from 'react-vis';
-import { VictoryPie, VictoryLabel, VictoryChart, VictoryTooltip, VictoryScatter } from 'victory';
+import { 	LineSegment,
+					VictoryAxis,
+					VictoryPie,
+					VictoryChart,
+					VictoryTooltip,
+					VictoryTheme,
+					VictoryPolarAxis,
+					VictoryBar
+				} from 'victory';
 import questions from '../questions.js';
 import counts from '../count.js';
 import './Quiz.css';
@@ -61,19 +68,32 @@ class Quiz extends Component {
 		if (this.state.answered.size === 19) {
 			return (
 				<div>
-				<div className="quiz-results">
-					<h2 className="quiz-question">Your Morningness-Eveningness Score is {this.state.score} </h2>
-					<p> Higher scores mean that you are more of a morning person, whereas lower scores mean that you are more of an evening person. The score can range from 23 to 76.</p>
-				</div>
-				<br />
-				<VictoryPie
-						data={[{x:37, y:6}, {x:42, y:6}, {x:34, y:6}, {x:51, y:4}, {x:41, y:4}, {x:49, y:4}, {x:36, y:4}, {x:55, y:3}, {x:43, y:3}, {x:40, y:3}, {x:47, y:3}, {x:45, y:2}, {x:27, y:2}, {x:52, y:2}, {x:56, y:2}, {x:32, y:2}, {x:46, y:2}, {x:48, y:2}, {x:26, y:2}, {x:39, y:2}, {x:30, y:2}, {x:54, y:2}, {x:53, y:1}, {x:50, y:1}, {x:63, y:1}, {x:57, y:1}, {x:38, y:1}, {x:59, y:1}, {x:28, y:1}, {x:60, y:1}, {x:73, y:1}, {x:66, y:1}, {x:68, y:1}, {x:35, y:1}, {x:33, y:1}, {x:25, y:1}]}
-						radius={200}
-						width={500}
-						height={500}
-						style={{ labels: { fontSize: 12, fill: "white" }}}
-						colorScale={"blue"}
-					/>
+					<div className="quiz-results">
+						<h2 className="quiz-question">Your Morningness-Eveningness Score is {this.state.score} </h2>
+						<p> Higher scores mean that you are more of a morning person, whereas lower scores mean that you are more of an evening person. The score can range from 23 to 76.</p>
+					</div>
+					<br />
+					<VictoryChart
+						theme={VictoryTheme.material}
+						domainPadding={5}
+						width={600}
+						domain={{ x: [22, 75], y: [0, 10] }}	
+						>
+						<VictoryAxis 
+							style={{
+								axis: {stroke: "white"},
+								tickLabels: {fontSize: 13, fill: "white"}
+							}}	
+							/>
+						<VictoryBar
+							labelComponent={<VictoryTooltip/>}
+							data={[{x:37, y:6, label:"37 for 6 people"}, {x:42, y:6, label:"42 for 6 people"}, {x:34, y:6, label:"34 for 6 people"}, {x:51, y:4, label:"51 for 4 people"}, {x:41, y:4, label:"41 for 4 people"}, {x:49, y:4, label:"49 for 4 people"}, {x:36, y:4, label:"36 for 4 people"}, {x:55, y:3, label:"55 for 3 people"}, {x:43, y:3, label:"43 for 3 people"}, {x:40, y:3, label:"40 for 3 people"}, {x:47, y:3, label:"47 for 3 people"}, {x:45, y:2, label:"45 for 2 people"}, {x:27, y:2, label:"27 for 2 people"}, {x:52, y:2, label:"52 for 2 people"}, {x:56, y:2, label:"56 for 2 people"}, {x:32, y:2, label:"32 for 2 people"}, {x:46, y:2, label:"46 for 2 people"}, {x:48, y:2, label:"48 for 2 people"}, {x:26, y:2, label:"26 for 2 people"}, {x:39, y:2, label:"39 for 2 people"}, {x:30, y:2, label:"30 for 2 people"}, {x:54, y:2, label:"54 for 2 people"}, {x:53, y:1, label:"53 for 1 people"}, {x:50, y:1, label:"50 for 1 people"}, {x:63, y:1, label:"63 for 1 people"}, {x:57, y:1, label:"57 for 1 people"}, {x:38, y:1, label:"38 for 1 people"}, {x:59, y:1, label:"59 for 1 people"}, {x:28, y:1, label:"28 for 1 people"}, {x:60, y:1, label:"60 for 1 people"}, {x:73, y:1, label:"73 for 1 people"}, {x:66, y:1, label:"66 for 1 people"}, {x:68, y:1, label:"68 for 1 people"}, {x:35, y:1, label:"35 for 1 people"}, {x:33, y:1, label:"33 for 1 people"}, {x:25, y:1, label:"25 for 1 people"}] }
+							style={{
+								data: { fill: "#FFF", "font-size":"14px", strokeWidth: 0 },
+								axisLabel: {fontSize: 13, fill: "white"}
+							}}
+							/>
+					</VictoryChart>
 				</div>
 			);
 		}
@@ -147,6 +167,8 @@ class QuizQuestion extends Component {
 			return (
 				<div className="compare">
 					<h2> Survey Results </h2>
+					<br />
+					<p> The following results were gathered from a survey answered by 83 participants. Convenience sampling was used to gather the data in a timely manner, most of the participants are college undergraduates or new graduates.</p>
 					<VictoryPie 
 						data={this.get_data()}
 						style={{ labels: { fontSize: 16, fill: "#1E122C" }}}

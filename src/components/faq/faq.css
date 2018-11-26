@@ -32,11 +32,12 @@
 
 .faq-text {
 	position: relative;
-	top: 50%;
-	transform: translateY(-100%);
+	top: 0; 
 	font-family: Roboto Slab;
-	overflow: scroll;
-	/*height: 325px;*/
+	overflow-y: scroll;
+	height: 225px;
+	padding: 0 20px;
+	text-align: left;
 }
 
 .faqs-container {

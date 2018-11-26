@@ -9,12 +9,12 @@ class Navbar extends Component {
 			<div className="navbar-container">
 				<div className="navbar-logo-container">
 					<p className="inline-block navbar-logo">Sleep</p>
-					<p className="inline-block navbar-logo-text">// why you need it.</p>
+					<p className="inline-block navbar-logo-text">& why you need it.</p>
 				</div>
 				<div className="navbar-menu">
-					<Link to="/info">info</Link>
-					<Link to="/quiz">compare</Link>
-					<Link to="/faq">faq</Link>
+					<Link to="/photos" onClick={() => this.props.select("photos")} >gallery</Link>
+					<Link to="/quiz" onClick={() => this.props.select("quiz")}>quiz</Link>
+					<Link to="/faq" onClick={() => this.props.select("faq")}>faq</Link>
 				</div>
 			</div>
 		);

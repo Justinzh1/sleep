@@ -116,7 +116,7 @@ export default {
 				pillows"
 		},
 		{ 
-				question: "Why is it so ahrd to maintain a good sleep schedule?",
+				question: "Why is it so hard to maintain a good sleep schedule?",
 				asked: 1,
 				answer: "there are several factors that play a part in affecting an individual’s personal sleep schedule. Social aspects \
 				as well as professional aspects can affect a person’s sleep schedule. The key is to try to keep a consistent schedule \
